@@ -18,10 +18,10 @@ def cadastrarUsuario():
         return geraResponse(400, "O parametro name é obrigatorio")
 
     if("email" not in body):
-        return geraResponse(400, "O parametro name é obrigatorio")
+        return geraResponse(400, "O parametro email é obrigatorio")
 
     if("password" not in body):
-        return geraResponse(400, "O parametro name é obrigatorio")        
+        return geraResponse(400, "O parametro password é obrigatorio")        
 
     user = insertUser(body["name"], body["email"], body["password"])
 
